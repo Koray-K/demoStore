@@ -12,8 +12,8 @@ import {
   View,
   StyleSheet,
   FlatList,
-  Dimensions,
   TextInput,
+  Dimensions,
 } from 'react-native';
 
 import Card from './components/Card';
@@ -24,13 +24,17 @@ function App() {
     <SafeAreaView style={styles.comtainer}>
       <View style={styles.scrollContainer}>
         <Text>Demo Store</Text>
-        <TextInput placeholder="Aramak için tıklayınız!" />
+        <TextInput
+          style={styles.textInput}
+          placeholder="Aramak için tıklayınız!"
+        />
         <FlatList
           horizontal={false}
           numColumns={2}
           keyExtractor={item => item.id.toString()}
           data={productData}
           renderItem={({item}) => <Card product={item} />}
+          showsVerticalScrollIndicator={false}
         />
       </View>
     </SafeAreaView>
@@ -41,6 +45,7 @@ const styles = StyleSheet.create({
   comtainer: {
     flex: 1,
     backgroundColor: 'white',
+    marginTop: 20,
   },
   scrollContainer: {
     flex: 4,
@@ -48,11 +53,15 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
   textInput: {
-    flex: 1,
-    fontWeight: '200',
-    //width: Dimensions.get('window').width.toString(),
-    borderStyle: 'solid',
+    width: Dimensions.get('window').width,
+    fontWeight: '600',
+    borderRadius: 20,
+    backgroundColor: '#d3d3d3',
+    margin: 12,
+    borderWidth: 1,
     borderColor: 'black',
+    padding: 10,
+    textAlign: 'center',
   },
 });
 

@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
   productPrice: {
     color: '#6495ed',
     fontSize: 12,
-    justifyContent: 'flex-end',
+    textAlign: 'right',
   },
 });
 
