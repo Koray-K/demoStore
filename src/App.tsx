@@ -40,19 +40,17 @@ function App() {
 const styles = StyleSheet.create({
   comtainer: {
     flex: 1,
-    width: Dimensions.get('screen').width.toString(),
-    flexWrap: 'wrap',
     backgroundColor: 'white',
   },
   scrollContainer: {
-    flexWrap: 'wrap',
-    width: Dimensions.get('window').width.toString(),
+    flex: 4,
     justifyContent: 'center',
     alignItems: 'center',
   },
   textInput: {
+    flex: 1,
     fontWeight: '200',
-    width: Dimensions.get('window').width.toString(),
+    //width: Dimensions.get('window').width.toString(),
     borderStyle: 'solid',
     borderColor: 'black',
   },
