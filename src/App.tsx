@@ -15,6 +15,8 @@ function App() {
   return (
     <SafeAreaView style={styles.comtainer}>
       <FlatList
+        horizontal={false}
+        numColumns={2}
         keyExtractor={item => item.id.toString()}
         data={productData}
         renderItem={({item}) => <Card product={item} />}

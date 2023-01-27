@@ -10,8 +10,10 @@ type productProps = {
 const Card = ({product}: productProps) => {
   return (
     <View style={styles.cardContainer}>
-      <Image style={styles.image} source={{uri: product.imgURL}} />
-      <Text>{product.title}</Text>
+      <View style={styles.productContainer}>
+        <Image style={styles.image} source={{uri: product.imgURL}} />
+        <Text style={styles.productTitle}>{product.title}</Text>
+      </View>
     </View>
   );
 };
