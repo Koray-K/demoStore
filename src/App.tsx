@@ -6,20 +6,30 @@
  */
 
 import React from 'react';
-import {SafeAreaView, Text, View} from 'react-native';
+import {SafeAreaView, Text, View, StyleSheet, FlatList} from 'react-native';
 
 import Card from './components/Card';
+import productData from './store_data.json';
 
 function App() {
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.comtainer}>
+      <FlatList
+        keyExtractor={item => item.id.toString()}
+        data={productData}
+        renderItem={({item}) => <Card product={item} />}
+      />
       <View>
         <Text>Some Text</Text>
       </View>
-
-      <Card />
     </SafeAreaView>
   );
 }
+
+const styles = StyleSheet.create({
+  comtainer: {
+    flex: 1,
+  },
+});
 
 export default App;

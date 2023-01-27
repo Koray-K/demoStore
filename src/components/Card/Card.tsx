@@ -1,10 +1,17 @@
 import React from 'react';
-import {View, Text, Flatlist} from 'react-native';
+import {View, Text, Image} from 'react-native';
 
-const Card = () => {
+import styles from './Card.style';
+
+type productProps = {
+  product: any;
+};
+
+const Card = ({product}: productProps) => {
   return (
-    <View>
-      <Text>Some Text</Text>
+    <View style={styles.cardContainer}>
+      <Image style={styles.image} source={{uri: product.imgURL}} />
+      <Text>{product.title}</Text>
     </View>
   );
 };
