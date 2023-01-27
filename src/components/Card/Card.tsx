@@ -13,6 +13,7 @@ const Card = ({product}: productProps) => {
       <View style={styles.productContainer}>
         <Image style={styles.image} source={{uri: product.imgURL}} />
         <Text style={styles.productTitle}>{product.title}</Text>
+        <Text style={styles.productPrice}>{product.price}</Text>
       </View>
     </View>
   );

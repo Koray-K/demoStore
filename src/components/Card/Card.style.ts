@@ -1,32 +1,40 @@
-import {StyleSheet} from 'react-native';
+import {StyleSheet, Dimensions} from 'react-native';
 
 const styles = StyleSheet.create({
   cardContainer: {
-    flex: 1,
-    height: 250,
-    width: 250,
+    height: Dimensions.get('window').height / 3.7,
+    width: Dimensions.get('window').width / 2.3,
     backgroundColor: 'white',
-    padding: 20,
-    paddingRight: 0,
     borderStyle: 'solid',
-  },
-  productContainer: {
-    flex: 1,
-    backgroundColor: '#e0e0e0',
+    gap: 10,
+    margin: 5,
     borderRadius: 10,
   },
+  productContainer: {
+    flexDirection: 'column',
+    backgroundColor: '#e0e0e0',
+    borderRadius: 5,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
   image: {
-    flex: 1,
-    height: 150,
-    width: 150,
-    padding: 10,
+    height: Dimensions.get('window').height / 5.2,
+    width: Dimensions.get('window').width / 2.5,
     borderRadius: 20,
-    marginRight: 30,
-    alignContent: 'center',
+    paddingLeft: 30,
+    flexWrap: 'wrap',
+    resizeMode: 'contain',
   },
   productTitle: {
-    fontSize: 18,
+    fontSize: 16,
     fontWeight: 'bold',
+    flexWrap: 'wrap',
+    textAlign: 'center',
+  },
+  productPrice: {
+    color: '#6495ed',
+    fontSize: 12,
+    justifyContent: 'flex-end',
   },
 });
 
