@@ -11,16 +11,16 @@ const styles = StyleSheet.create({
   productContainer: {
     flexDirection: 'column',
     backgroundColor: '#e0e0e0',
-    height: Dimensions.get('window').height / 5,
     width: Dimensions.get('window').width / 2.3,
-    borderRadius: 5,
+    borderRadius: 10,
     justifyContent: 'center',
     alignItems: 'center',
   },
   image: {
-    height: Dimensions.get('window').height / 8,
-    width: Dimensions.get('window').width / 4,
-    borderRadius: 20,
+    height: Dimensions.get('window').height / 4,
+    width: '100%',
+    resizeMode: 'contain',
+    borderRadius: 10,
     paddingLeft: 30,
   },
   productTitle: {
@@ -33,6 +33,10 @@ const styles = StyleSheet.create({
     color: '#6495ed',
     fontSize: 12,
     textAlign: 'right',
+  },
+  stock: {
+    color: 'red',
+    fontWeight: 'bold',
   },
 });
 

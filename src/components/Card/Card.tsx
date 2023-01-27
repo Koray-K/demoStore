@@ -18,6 +18,7 @@ const Card = ({product}: productProps) => {
         />
         <Text style={styles.productTitle}>{product.title}</Text>
         <Text style={styles.productPrice}>{product.price}</Text>
+        {!product.inStock && <Text style={styles.stock}>Stokta Yok!</Text>}
       </View>
     </View>
   );
