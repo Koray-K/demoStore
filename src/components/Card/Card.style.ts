@@ -14,8 +14,8 @@ const styles = StyleSheet.create({
     width: Dimensions.get('window').width / 2.3,
     borderRadius: 10,
     padding: 5,
-//    justifyContent: 'center',
-//    alignItems: 'center',
+    //    justifyContent: 'center',
+    //    alignItems: 'center',
   },
   image: {
     height: Dimensions.get('window').height / 4,

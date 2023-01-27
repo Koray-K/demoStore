@@ -6,29 +6,19 @@
  */
 
 import React from 'react';
-import {
-  SafeAreaView,
-  Text,
-  View,
-  StyleSheet,
-  FlatList,
-  TextInput,
-  Dimensions,
-} from 'react-native';
+import {SafeAreaView, View, StyleSheet, FlatList} from 'react-native';
 
 import Card from './components/Card';
 import productData from './store_data.json';
+
+import Header from './components/Search/Header';
 
 function App() {
   return (
     <SafeAreaView style={styles.comtainer}>
       <View style={styles.scrollContainer}>
-        <Text>Demo Store</Text>
-        <TextInput
-          style={styles.textInput}
-          placeholder="Aramak için tıklayınız!"
-        />
         <FlatList
+          ListHeaderComponent={() => <Header />}
           horizontal={false}
           numColumns={2}
           keyExtractor={item => item.id.toString()}
@@ -51,17 +41,6 @@ const styles = StyleSheet.create({
     flex: 4,
     justifyContent: 'center',
     alignItems: 'center',
-  },
-  textInput: {
-    width: Dimensions.get('window').width,
-    fontWeight: '600',
-    borderRadius: 20,
-    backgroundColor: '#d3d3d3',
-    margin: 12,
-    borderWidth: 1,
-    borderColor: 'black',
-    padding: 10,
-    textAlign: 'center',
   },
 });
 
