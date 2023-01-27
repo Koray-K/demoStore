@@ -13,8 +13,9 @@ const styles = StyleSheet.create({
     backgroundColor: '#e0e0e0',
     width: Dimensions.get('window').width / 2.3,
     borderRadius: 10,
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: 5,
+//    justifyContent: 'center',
+//    alignItems: 'center',
   },
   image: {
     height: Dimensions.get('window').height / 4,
@@ -26,8 +27,6 @@ const styles = StyleSheet.create({
   productTitle: {
     fontSize: 16,
     fontWeight: 'bold',
-    flexWrap: 'wrap',
-    textAlign: 'center',
   },
   productPrice: {
     color: '#6495ed',
@@ -37,6 +36,7 @@ const styles = StyleSheet.create({
   stock: {
     color: 'red',
     fontWeight: 'bold',
+    textAlign: 'left',
   },
 });
 
